@@ -15,6 +15,9 @@
 		FBE9FC0D26B1BF81001FA19E /* PersonsListOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9FC0C26B1BF81001FA19E /* PersonsListOneViewController.swift */; };
 		FBE9FC0F26B1C0AE001FA19E /* PerrsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9FC0E26B1C0AE001FA19E /* PerrsonModel.swift */; };
 		FBE9FC1126B1C0FC001FA19E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9FC1026B1C0FC001FA19E /* DataManager.swift */; };
+		FBE9FC1326B1E51D001FA19E /* MainTapBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9FC1226B1E51D001FA19E /* MainTapBarViewController.swift */; };
+		FBE9FC1526B1E93B001FA19E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9FC1426B1E93B001FA19E /* ContactViewController.swift */; };
+		FBE9FC1726B1F7D0001FA19E /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9FC1626B1F7D0001FA19E /* ContactsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		FBE9FC0C26B1BF81001FA19E /* PersonsListOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListOneViewController.swift; sourceTree = "<group>"; };
 		FBE9FC0E26B1C0AE001FA19E /* PerrsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerrsonModel.swift; sourceTree = "<group>"; };
 		FBE9FC1026B1C0FC001FA19E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FBE9FC1226B1E51D001FA19E /* MainTapBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTapBarViewController.swift; sourceTree = "<group>"; };
+		FBE9FC1426B1E93B001FA19E /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		FBE9FC1626B1F7D0001FA19E /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +68,42 @@
 			children = (
 				FBE9FBF626B1BBE2001FA19E /* AppDelegate.swift */,
 				FBE9FBF826B1BBE2001FA19E /* SceneDelegate.swift */,
-				FBE9FBFC26B1BBE2001FA19E /* Main.storyboard */,
-				FBE9FC0E26B1C0AE001FA19E /* PerrsonModel.swift */,
-				FBE9FC1026B1C0FC001FA19E /* DataManager.swift */,
+				FBE9FC1826B20A31001FA19E /* Models */,
+				FBE9FC1A26B20A6B001FA19E /* Screens */,
+				FBE9FC1926B20A45001FA19E /* Controllers */,
 				FBE9FBFF26B1BBE4001FA19E /* Assets.xcassets */,
-				FBE9FC0C26B1BF81001FA19E /* PersonsListOneViewController.swift */,
 				FBE9FC0126B1BBE4001FA19E /* LaunchScreen.storyboard */,
 				FBE9FC0426B1BBE4001FA19E /* Info.plist */,
 			);
 			path = PersonsListApp;
+			sourceTree = "<group>";
+		};
+		FBE9FC1826B20A31001FA19E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FBE9FC0E26B1C0AE001FA19E /* PerrsonModel.swift */,
+				FBE9FC1026B1C0FC001FA19E /* DataManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FBE9FC1926B20A45001FA19E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FBE9FC1426B1E93B001FA19E /* ContactViewController.swift */,
+				FBE9FC1626B1F7D0001FA19E /* ContactsTableViewController.swift */,
+				FBE9FC1226B1E51D001FA19E /* MainTapBarViewController.swift */,
+				FBE9FC0C26B1BF81001FA19E /* PersonsListOneViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FBE9FC1A26B20A6B001FA19E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FBE9FBFC26B1BBE2001FA19E /* Main.storyboard */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +177,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBE9FC0D26B1BF81001FA19E /* PersonsListOneViewController.swift in Sources */,
+				FBE9FC1526B1E93B001FA19E /* ContactViewController.swift in Sources */,
 				FBE9FC1126B1C0FC001FA19E /* DataManager.swift in Sources */,
 				FBE9FBF726B1BBE2001FA19E /* AppDelegate.swift in Sources */,
+				FBE9FC1326B1E51D001FA19E /* MainTapBarViewController.swift in Sources */,
 				FBE9FBF926B1BBE2001FA19E /* SceneDelegate.swift in Sources */,
+				FBE9FC1726B1F7D0001FA19E /* ContactsTableViewController.swift in Sources */,
 				FBE9FC0F26B1C0AE001FA19E /* PerrsonModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,9 @@ import Foundation
 
 struct Person {
     
-    let name: String
-    let surname: String
-    let email: String
-    let phonesNumber: String
+    var name: String
+    var surname: String
+    var email: String
+    var phonesNumber: String
     
 }

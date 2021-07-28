@@ -9,38 +9,37 @@ import UIKit
 
 class PersonsListOneViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var persons: [Person] = []
+    @IBOutlet weak var personsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         creatingPerson()
-        print(persons)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return persons.count
+        return MainTapBarViewController.persons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
-        cell.textLabel?.text = "\(persons[indexPath.row].name) \(persons[indexPath.row].surname)"
+        cell.textLabel?.text = "\(MainTapBarViewController.persons[indexPath.row].name) \(MainTapBarViewController.persons[indexPath.row].surname)"
         return cell
-        
     }
     
-    
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "contactSegue" {
+            guard let contactVC = segue.destination as? ContactViewController else { return }
+            guard let indexPath = personsTableView.indexPathForSelectedRow else { return }
+            
+            contactVC.person = Person(name: MainTapBarViewController.persons[indexPath.row].name,
+                                      surname: MainTapBarViewController.persons[indexPath.row].surname,
+                                      email: MainTapBarViewController.persons[indexPath.row].email,
+                                      phonesNumber: MainTapBarViewController.persons[indexPath.row].phonesNumber)
+        }
     }
-    */
-
 }
 
 extension PersonsListOneViewController {
@@ -56,7 +55,7 @@ extension PersonsListOneViewController {
             DataManager.emails = DataManager.emails.filter({ $0 != onePerson.email })
             DataManager.phoneNumbers = DataManager.phoneNumbers.filter({ $0 != onePerson.phonesNumber })
             
-            persons.append(onePerson)
+            MainTapBarViewController.persons.append(onePerson)
             
         }
     }
